@@ -98,7 +98,7 @@ Distributed under the MIT License. See ```LICENSE``` for more information.
 <br />
 <p align="center">
    <a href="https://github.com/Patrick0105/StockX-Master">
-     <img src="Img/Icon. JPEG" alt="Logo" width="auto" height="128">
+     <img src="Img/Icon.JPEG" alt="Logo" width="auto" height="128">
    </a>
   
    <h3 align="center">『StockX Master』</h3>
