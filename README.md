@@ -53,7 +53,7 @@
 
 ## 程式說明
 1. 首先，我們看 Procfile 檔案，這個檔案是 Heroku 環境下執行程式的指令，在這個檔案中只有一行程式碼：
-```
+```Procfile
 web: python app.py
 ```
 這行程式碼告訴 Heroku 我們的主程式是 app.py，並且是一個 web 服務。
@@ -61,7 +61,7 @@ web: python app.py
 2. 接著，在 app.py 檔案中，我們使用 Flask 套件建立了一個 Flask 服務，並且使用 Line Bot SDK 套件，設定了一個 Webhook。
 當用戶在 Line 上傳送文字給 Bot 時，Bot 會收到請求並且執行回覆。
 我們使用 jsonhandle.py 這個檔案中的函數來查詢 StockX 網站上的價格，並且回覆給用戶。
-```
+```py
 @handler.add(MessageEvent, message=TextMessage)
 def ReplyPrice(event):
     jsonhandle.jsonget(query=event.message.text)
@@ -147,7 +147,7 @@ We hope that this Line Bot can help trendy shoe lovers get the latest price info
 
 ## Program Description
 1. First, let’s look at the Procfile file. This file is the command to execute the program in the Heroku environment. There is only one line of code in this file:
-```
+```Procfile
 web:python app.py
 ```
 This line of code tells Heroku that our main program is app.py and is a web service.
@@ -155,7 +155,7 @@ This line of code tells Heroku that our main program is app.py and is a web serv
 2. Next, in the app.py file, we use the Flask package to create a Flask service, and use the Line Bot SDK package to set up a Webhook.
 When a user sends text to the Bot on Line, the Bot will receive the request and execute the response.
 We use functions in the jsonhandle.py file to query prices on the StockX website and respond to the user.
-```
+```py
 @handler.add(MessageEvent, message=TextMessage)
 def ReplyPrice(event):
      jsonhandle.jsonget(query=event.message.text)
